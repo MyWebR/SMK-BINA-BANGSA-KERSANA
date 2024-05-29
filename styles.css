@@ -1,0 +1,320 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+/* START HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.348
+  ); /* Warna latar belakang dengan opacity */
+  backdrop-filter: blur(10px); /* Efek blur */
+  z-index: 1000; /* Menempatkan header di atas elemen lain */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Atur padding sesuai kebutuhan */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  color: #1e293b;
+  font-size: 18px;
+}
+
+#logo {
+  color: #dc2626;
+}
+
+nav a {
+  font-size: 15px;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e293b;
+  transition: ease-in-out 0.3s;
+}
+
+nav a:hover {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: #dc2626;
+}
+
+.users button {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  border: none;
+  background-color: #0ea5e9;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 40px;
+  transition: ease-in-out 0.3s;
+}
+
+.users button:hover {
+  background-color: #dc2626;
+}
+
+.users button img {
+  margin-right: 10px;
+  height: 28px;
+}
+
+.users button p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+  background-color: #cbd5e1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 30px;
+  transition: ease-in-out 0.5s;
+}
+
+.menu-btn:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
+.menu-btn p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: rgb(30, 41, 59);
+  color: white;
+  border-radius: 0 5px 5px 0;
+  backdrop-filter: blur(5px);
+  transition: left 0.3s;
+  z-index: 1000;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.close-btn p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.close-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #cbd5e1;
+}
+/* END HEADER */
+
+/* START HOME */
+.home {
+  margin-top: 100px;
+  height: 100vh;
+  width: auto;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* CONTENT KIRI */
+.content-kiri p {
+  font-weight: 500;
+  max-width: 50%;
+}
+
+#deskripsi-sekolah {
+  color: #64748b;
+}
+
+.sosmed-sekolah {
+  display: flex;
+  align-items: center;
+}
+
+.sosmed-sekolah img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+/* CONTENT KANAN */
+.content-kanan {
+  text-align: center;
+}
+
+.content-kanan img {
+  border-radius: 10px;
+  height: 400px;
+  width: auto;
+}
+
+#dekorasi-1,
+#dekorasi-2 {
+  position: absolute;
+  background-color: #ef4444;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#dekorasi-1 {
+  margin-left: -100px;
+}
+
+#dekorasi-2 {
+  margin-top: -70px;
+  margin-left: 230px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.content-kanan button {
+  margin: 10px;
+  background-color: #cbd5e1;
+  padding: 10px 13px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-btn i img {
+  width: 20px;
+  height: auto;
+}
+
+/* END HOME */
+
+@media (max-width: 768px) {
+  /* START HEADER */
+  header {
+    margin: 0;
+  }
+  nav {
+    display: none;
+  }
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+  .logo h2 {
+    font-size: 15px;
+  }
+  .users button {
+    margin-right: 0;
+  }
+  .menu-btn {
+    padding: 0 25px;
+    margin-right: 45px;
+  }
+  .menu-btn p {
+    font-size: 12px;
+  }
+  /* END HEADER */
+
+  /* START HOME */
+  .home {
+    display: block;
+    padding: 0 10px;
+    margin: 100px 0 100px 0;
+  }
+  .content-kiri {
+    margin-bottom: 50px;
+  }
+  .content-kiri p {
+    max-width: 100%;
+  }
+  #dekorasi-1 {
+    margin-left: 0;
+  }
+  .content-kanan {
+    position: relative;
+    text-align: center; /* Opsional: Pusatkan teks di dalam content-kanan */
+  }
+  #dekorasi-2 {
+    margin-top: -70px;
+    margin-left: 0;
+  }
+
+  /* content kanan */
+  .content-kanan {
+    position: relative;
+  }
+  .content-kanan img {
+    height: 290px;
+  }
+  .arrow-btn {
+    transform: none;
+    margin-top: 10px;
+    text-align: center; /* Pusatkan tombol di bawah gambar */
+  }
+  .prev {
+    margin-right: 0 0 0 10px; /* Beri jarak antara tombol prev dan next saat berada di bawah gambar */
+  }
+  .next {
+    margin: 0 -10px 0 0; /* Beri jarak antara tombol next dan prev saat berada di bawah gambar */
+  }
+  /* END HOME */
+}
