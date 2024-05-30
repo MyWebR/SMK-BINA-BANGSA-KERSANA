@@ -30,26 +30,20 @@ function toggleSidebar() {
 
 
 // KONTROL SLIDE GAMBAR PADA HOME
+let currentImageIndex = 0;
+const images = [
+  'img/content-home/1lebar.jpg',
+  'img/content-home/2lebar.jpg',
+  'img/content-home/3lebar.jpg'
+];
 const sliderImage = document.getElementById('slider-image');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const images = ['img/content-home/1lebar.jpg', 'img/content-home/2lebar.jpg', 'img/content-home/3lebar.jpg'];
-let currentIndex = 0;
 
-function showImage(index) {
-  sliderImage.src = images[index];
-}
+document.getElementById('prev-btn').addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
+  sliderImage.src = images[currentImageIndex];
+});
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-}
-
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-}
-
-nextBtn.addEventListener('click', nextImage);
-prevBtn.addEventListener('click', prevImage);
-
+document.getElementById('next-btn').addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
+  sliderImage.src = images[currentImageIndex];
+});

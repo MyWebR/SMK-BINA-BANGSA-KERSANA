@@ -251,11 +251,13 @@ nav a:hover {
 .sosmed-sekolah {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .sosmed-sekolah img {
   height: 20px;
   margin-left: 10px;
+  filter: grayscale(100%);
 }
 
 /* CONTENT KANAN */
@@ -268,6 +270,7 @@ nav a:hover {
   height: 400px;
   width: auto;
 }
+
 
 .dekorasi-1,
 .dekorasi-2 {
@@ -292,7 +295,7 @@ button {
 
 .content-kanan button {
   margin: 10px;
-  background-color: #cbd5e1;
+  background-color: #cbd5e14b;
   padding: 10px 13px;
   border-radius: 50px;
   border: none;
@@ -341,13 +344,6 @@ button {
 .kerjasama-luas img {
   margin-bottom: 10px; /* Opsional: Berikan margin bawah agar ada jarak antara elemen */
   transition: ease-in-out 1s;
-}
-
-.fasilitas-lengkap img:hover,
-.lingkungan-nyaman img:hover,
-.pengajar-kompeten img:hover,
-.kerjasama-luas img:hover {
-  height: 130px;
 }
 
 .fasilitas-lengkap a,
@@ -490,17 +486,23 @@ button {
   .content-kiri {
     margin-bottom: 50px;
   }
+
+  .content-kiri h1 {
+    font-size: 20px;
+  }
+
   .content-kiri p {
+    font-size: 14px;
     max-width: 100%;
   }
 
   .get,
   .video {
-    padding: 9px;
+    padding: 5px 7px;
   }
 
   .get-started a {
-    font-size: 14px;
+    font-size: 10px;
   }
   /* #dekorasi-1 {
     margin-left: 0;
@@ -533,6 +535,12 @@ button {
   .next {
     margin: 0 -10px 0 0; /* Beri jarak antara tombol next dan prev saat berada di bawah gambar */
   }
+
+  #next, #prev {
+    height: 15px;
+    width: auto;
+  }
+
   /* END HOME */
 
   /* START ABOUT */
@@ -540,6 +548,14 @@ button {
     text-align: center;
     padding: 0 10px;
     margin: 100px 0 100px 0;
+  }
+
+  .title-about h1 {
+    font-size: 20px;
+  }
+
+  .title-about p {
+    font-size: 13px;
   }
 
   .lingkup-bb {
