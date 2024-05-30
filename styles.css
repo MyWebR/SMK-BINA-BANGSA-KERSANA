@@ -16,12 +16,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.348
-  ); /* Warna latar belakang dengan opacity */
+  background-color: #f8fafc37; /* Warna latar belakang dengan opacity */
   backdrop-filter: blur(10px); /* Efek blur */
   z-index: 1000; /* Menempatkan header di atas elemen lain */
   display: flex;
@@ -89,6 +84,7 @@ nav a:hover {
 .users button img {
   margin-right: 10px;
   height: 28px;
+  width: auto;
 }
 
 .users button p {
@@ -177,13 +173,79 @@ nav a:hover {
 }
 
 /* CONTENT KIRI */
+.content-kiri h1 {
+  font-weight: bold;
+}
+
 .content-kiri p {
-  font-weight: 500;
   max-width: 50%;
 }
 
 #deskripsi-sekolah {
   color: #64748b;
+}
+
+.get-started {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.get a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f8fafc;
+}
+
+.video a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #dc2626;
+}
+
+.get {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: #dc2626;
+  transition: ease-in-out 0.5s;
+}
+
+.get:hover {
+  background-color: #64748b;
+  color: #dc2626;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid #dc2626;
+  background-color: transparent;
+  transition: ease-in-out 0.5s;
+}
+
+.video:hover {
+  background-color: #64748b;
+  border: none;
+}
+
+.get img,
+.video img {
+  height: 20px;
+  width: auto;
+  margin-left: 20px;
 }
 
 .sosmed-sekolah {
@@ -207,21 +269,21 @@ nav a:hover {
   width: auto;
 }
 
-#dekorasi-1,
-#dekorasi-2 {
+.dekorasi-1,
+.dekorasi-2 {
   position: absolute;
   background-color: #ef4444;
   padding: 10px 20px;
   border-radius: 10px;
 }
 
-#dekorasi-1 {
+.dekorasi-1 {
   margin-left: -100px;
 }
 
-#dekorasi-2 {
+.dekorasi-2 {
   margin-top: -70px;
-  margin-left: 230px;
+  margin-left: 490px;
 }
 
 button {
@@ -241,10 +303,155 @@ button {
   width: 20px;
   height: auto;
 }
-
 /* END HOME */
 
-@media (max-width: 768px) {
+/* START ABOUT */
+.about {
+  margin-top: 100px;
+  height: 100vh;
+  width: auto;
+  padding: 0 100px;
+}
+
+.title-about {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.lingkup-bb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* fasiltas-lengkap */
+.fasilitas-lengkap,
+.lingkungan-nyaman,
+.pengajar-kompeten,
+.kerjasama-luas {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Untuk memusatkan elemen secara horizontal */
+  text-align: center; /* Opsional: Untuk memusatkan teks */
+}
+
+.fasilitas-lengkap img,
+.lingkungan-nyaman img,
+.pengajar-kompeten img,
+.kerjasama-luas img {
+  margin-bottom: 10px; /* Opsional: Berikan margin bawah agar ada jarak antara elemen */
+  transition: ease-in-out 1s;
+}
+
+.fasilitas-lengkap img:hover,
+.lingkungan-nyaman img:hover,
+.pengajar-kompeten img:hover,
+.kerjasama-luas img:hover {
+  height: 130px;
+}
+
+.fasilitas-lengkap a,
+.lingkungan-nyaman a,
+.pengajar-kompeten a,
+.kerjasama-luas a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1e293b;
+  transition: ease-in-out 1s;
+}
+
+.fasilitas-lengkap a:hover,
+.lingkungan-nyaman a:hover,
+.pengajar-kompeten a:hover,
+.kerjasama-luas a:hover {
+  color: #dc2626;
+  transition: ease-in-out 0.5s;
+}
+
+.fasilitas-lengkap p,
+.lingkungan-nyaman p,
+.pengajar-kompeten p,
+.kerjasama-luas p {
+  max-width: 150px;
+  font-size: 13px;
+}
+
+/* END ABOUT */
+
+/* CSS UNUTK TAMPILAN TABLET */
+/* Tablets (medium screens, 768px - 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .logo h2 {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1e293b;
+    transition: ease-in-out 0.3s;
+  }
+
+  .users button {
+    padding: 3px 6px;
+  }
+
+  .users button img {
+    margin-right: 5px;
+    height: 20px;
+    width: auto;
+  }
+
+  .users button p {
+    font-size: 10px;
+  }
+
+  .home {
+    padding: 0 30px;
+    display: flex;
+  }
+
+  .content-kiri {
+    margin-bottom: 50px;
+  }
+
+  .content-kiri h1 {
+    font-size: 30px;
+  }
+
+  .content-kiri p {
+    font-size: 14px;
+    max-width: 50%;
+  }
+
+  .get-started a {
+    font-size: 12px;
+  }
+
+  /* content kanan */
+  .content-kanan {
+    position: relative;
+  }
+  .content-kanan img {
+    height: 300px;
+    width: auto;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 0 30px;
+  }
+}
+
+/* CSS UNTUK TAMPILAN MOBILE */
+@media screen and (max-width: 768px) {
   /* START HEADER */
   header {
     margin: 0;
@@ -286,24 +493,34 @@ button {
   .content-kiri p {
     max-width: 100%;
   }
-  #dekorasi-1 {
-    margin-left: 0;
+
+  .get,
+  .video {
+    padding: 9px;
   }
+
+  .get-started a {
+    font-size: 14px;
+  }
+  /* #dekorasi-1 {
+    margin-left: 0;
+  } */
   .content-kanan {
     position: relative;
-    text-align: center; /* Opsional: Pusatkan teks di dalam content-kanan */
+    text-align: center;
   }
-  #dekorasi-2 {
+  /* #dekorasi-2 {
     margin-top: -70px;
     margin-left: 0;
-  }
+  } */
 
   /* content kanan */
   .content-kanan {
     position: relative;
   }
   .content-kanan img {
-    height: 265px;
+    height: 240px;
+    width: auto;
   }
   .arrow-btn {
     transform: none;
@@ -317,4 +534,16 @@ button {
     margin: 0 -10px 0 0; /* Beri jarak antara tombol next dan prev saat berada di bawah gambar */
   }
   /* END HOME */
+
+  /* START ABOUT */
+  .about {
+    text-align: center;
+    padding: 0 10px;
+    margin: 100px 0 100px 0;
+  }
+
+  .lingkup-bb {
+    display: block;
+  }
+  /* END ABOUT */
 }
