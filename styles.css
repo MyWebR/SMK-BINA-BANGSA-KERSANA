@@ -271,7 +271,6 @@ nav a:hover {
   width: auto;
 }
 
-
 .dekorasi-1,
 .dekorasi-2 {
   position: absolute;
@@ -479,11 +478,12 @@ button {
 
   /* START HOME */
   .home {
-    display: block;
+    display: inline-block;
     padding: 0 10px;
     margin: 100px 0 100px 0;
   }
   .content-kiri {
+    display: block;
     margin-bottom: 50px;
   }
 
@@ -504,30 +504,18 @@ button {
   .get-started a {
     font-size: 10px;
   }
-  /* #dekorasi-1 {
-    margin-left: 0;
-  } */
+
   .content-kanan {
-    position: relative;
     text-align: center;
   }
-  /* #dekorasi-2 {
-    margin-top: -70px;
-    margin-left: 0;
-  } */
 
-  /* content kanan */
-  .content-kanan {
-    position: relative;
-  }
   .content-kanan img {
-    height: 240px;
+    height: 250px;
     width: auto;
   }
   .arrow-btn {
     transform: none;
     margin-top: 10px;
-    text-align: center; /* Pusatkan tombol di bawah gambar */
   }
   .prev {
     margin-right: 0 0 0 10px; /* Beri jarak antara tombol prev dan next saat berada di bawah gambar */
@@ -536,7 +524,8 @@ button {
     margin: 0 -10px 0 0; /* Beri jarak antara tombol next dan prev saat berada di bawah gambar */
   }
 
-  #next, #prev {
+  #next,
+  #prev {
     height: 15px;
     width: auto;
   }
